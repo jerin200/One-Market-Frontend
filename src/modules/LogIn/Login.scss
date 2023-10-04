@@ -1,0 +1,61 @@
+.login-wapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-container {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 372px;
+    padding: 44px 34px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .forgot-password {
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 12px;
+      color: #5570f1;
+    }
+    .create-account {
+      font-size: 14px;
+      color: #8b8d97;
+      padding: 48px 0;
+    }
+
+    .create-account span {
+      color: #5570f1;
+      font-weight: 500;
+    }
+
+    .create-account span:hover {
+      cursor: pointer;
+    }
+
+    .welcome-text {
+      font-size: 20px;
+      font-weight: 500;
+      padding-bottom: 8px;
+    }
+    .sub-heading {
+      font-size: 14px;
+      font-weight: 400;
+      color: #8b8d97;
+      padding-bottom: 60px;
+    }
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+      input {
+        height: 1.2em;
+      }
+    }
+  }
+}
