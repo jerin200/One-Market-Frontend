@@ -1,17 +1,33 @@
-import { Box, Container, InputAdornment, Link, TextField } from "@mui/material";
+import { Box, Button, Container, InputAdornment, Link, TextField } from "@mui/material";
 import { Mail } from "react-feather";
 import { Lock } from "react-feather";
-import { AuthButton } from "../../components/styledComponents/CustomButton.js";
-import "./Login.scss";
+import {User}  from "react-feather";
+import {AuthButton} from "../../../components/styledComponents/CustomButton"
+import { useNavigate } from "react-router-dom";
+import { path } from "../../Routes/Routes";
 function Login() {
+  const navigate=useNavigate();
   return (
     <>
       <Container maxWidth={false} sx={{ bgcolor: "#F4F5FA", height: "100vh" }}>
         <Box className="login-wapper">
           <Box className="login-container">
-            <p className="welcome-text">Welcome back!</p>
-            <p className="sub-heading">Login to your account</p>
+            <p className="welcome-text">Get started with One Market</p>
+            <p className="sub-heading">Create your free account</p>
             <Box className="field-container">
+            <TextField
+                fullWidth
+                id="outlined"
+                placeholder="Name"
+                sx={{ backgroundColor: "rgba(239, 241, 249, 0.6)" }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <User color="#6E7079" size="22px" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
               <TextField
                 fullWidth
                 id="outlined"
@@ -42,14 +58,11 @@ function Login() {
                 }}
               />
             </Box>
-            <Link className="forgot-password" href="#" underline="none">
-              {"Forgot Password?"}
-            </Link>
             <p className="create-account">
-              Don’t have an account? <span>Sign Up</span>{" "}
+            Already have an account? <span onClick={()=>navigate(path.login)}>Sign in</span>{" "}
             </p>
             <AuthButton size="medium" fullWidth>
-              Login
+              Sign up
             </AuthButton>
           </Box>
         </Box>
