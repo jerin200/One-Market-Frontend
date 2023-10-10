@@ -1,13 +1,11 @@
-import AuthLayout from "./components/AuthLayout/AuthLayout.jsx";
-import Login from "./modules/LogIn/Login.jsx";
+
 import "./index.scss"
+import RouterContainer from "./modules/Routes/RouterContainer.jsx";
 
 function App() {
   return (
     <>
-      <AuthLayout>
-        <Login />
-      </AuthLayout>
+      <RouterContainer/>
     </>
   );
 }
